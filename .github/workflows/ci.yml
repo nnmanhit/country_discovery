@@ -13,6 +13,9 @@ jobs:
     name: Build and Test
     runs-on: macos-latest
     steps:
+      - name: Check Xcode version
+        run: xcodebuild -showsdks
+        
       - name: Checkout repository
         uses: actions/checkout@v4
 
