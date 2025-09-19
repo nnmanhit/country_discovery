@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1620"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES"
+      buildArchitectures = "Automatic">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07E9B9582E7CC01D00B1CAE5"
+               BuildableName = "CredPlatformContest.app"
+               BlueprintName = "CredPlatformContest"
+               ReferencedContainer = "container:CredPlatformContest.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07E9B9682E7CC02000B1CAE5"
+               BuildableName = "CredPlatformContestTests.xctest"
+               BlueprintName = "CredPlatformContestTests"
+               ReferencedContainer = "container:CredPlatformContest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07E9B9722E7CC02000B1CAE5"
+               BuildableName = "CredPlatformContestUITests.xctest"
+               BlueprintName = "CredPlatformContestUITests"
+               ReferencedContainer = "container:CredPlatformContest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "07E9B9582E7CC01D00B1CAE5"
+            BuildableName = "CredPlatformContest.app"
+            BlueprintName = "CredPlatformContest"
+            ReferencedContainer = "container:CredPlatformContest.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OPENAI_API_KEY"
+            value = "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"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "GEMINI_API_KEY"
+            value = "AIzaSyCz8ai7-z4Ca0qxqUVT9TjGGz17f-VfCr8"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "07E9B9582E7CC01D00B1CAE5"
+            BuildableName = "CredPlatformContest.app"
+            BlueprintName = "CredPlatformContest"
+            ReferencedContainer = "container:CredPlatformContest.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

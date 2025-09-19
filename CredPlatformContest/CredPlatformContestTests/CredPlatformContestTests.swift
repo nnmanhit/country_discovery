@@ -28,7 +28,7 @@ final class CredPlatformContestTests: XCTestCase {
         
         self.mockApiService = MockAPIService()
         
-        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY ?? "", model: "gpt-3.5-turbo")
         self.mockStorageService = MockStorageService()
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
@@ -44,7 +44,7 @@ final class CredPlatformContestTests: XCTestCase {
         self.mockApiService = MockAPIService()
         self.mockApiService?.shouldThrowError = true
         
-        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY ?? "", model: "gpt-3.5-turbo")
         self.mockStorageService = MockStorageService()
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
@@ -58,7 +58,7 @@ final class CredPlatformContestTests: XCTestCase {
     func testLoadCountryFuncFactFailed() async throws {
         
         self.mockApiService = MockAPIService()
-        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY ?? "", model: "gpt-3.5-turbo")
         self.mockLlmService?.shouldFailed = true
         
         self.mockStorageService = MockStorageService()
@@ -74,7 +74,7 @@ final class CredPlatformContestTests: XCTestCase {
     func testLoadCountryFuncFactSuccessfully() async throws {
         
         self.mockApiService = MockAPIService()
-        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY ?? "", model: "gpt-3.5-turbo")
         self.mockStorageService = MockStorageService()
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
@@ -88,7 +88,7 @@ final class CredPlatformContestTests: XCTestCase {
     func testLoadCountryFuncFactWithQuestionSuccessfully() async throws {
         
         self.mockApiService = MockAPIService()
-        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY ?? "", model: "gpt-3.5-turbo")
         self.mockStorageService = MockStorageService()
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
@@ -102,7 +102,7 @@ final class CredPlatformContestTests: XCTestCase {
     func testLoadCountryFuncFactWithQuestionFailed() async throws {
         
         self.mockApiService = MockAPIService()
-        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY ?? "", model: "gpt-3.5-turbo")
         self.mockLlmService?.shouldFailedQuestion = true
         
         self.mockStorageService = MockStorageService()
@@ -118,7 +118,7 @@ final class CredPlatformContestTests: XCTestCase {
     func testToggleFavoriteCountryOn() async throws {
         
         self.mockApiService = MockAPIService()
-        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY ?? "", model: "gpt-3.5-turbo")
         self.mockStorageService = MockStorageService()
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
@@ -134,7 +134,7 @@ final class CredPlatformContestTests: XCTestCase {
     func testToggleFavoriteCountryOff() async throws {
         
         self.mockApiService = MockAPIService()
-        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY ?? "", model: "gpt-3.5-turbo")
         self.mockStorageService = MockStorageService()
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
