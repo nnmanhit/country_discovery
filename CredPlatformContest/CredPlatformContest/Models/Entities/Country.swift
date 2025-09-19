@@ -21,7 +21,9 @@ struct Country : Entity, Identifiable, Hashable {
     var code : ID
     let currency : String?
     let capital : String?
+    let emoji : String?
     let languages : [Language]
+    let continent : Continent?
     
     var isFavorited : Bool?
     
@@ -35,9 +37,11 @@ extension Country {
         let realm = CountryRealm()
         realm.name = self.name
         realm.capital = self.capital
+        realm.emoji = self.emoji
         realm.code = self.code
         realm.currency = self.currency
         realm.isFavorited = self.isFavorited
+        realm.continent = self.continent?.toRealm()
         return realm
         
     }

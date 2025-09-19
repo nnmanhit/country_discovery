@@ -19,7 +19,7 @@ struct Config {
     static let GEMINI_API_KEY = ProcessInfo.processInfo.environment["GEMINI_API_KEY"]
     
     static let realmConfiguration = Realm.Configuration(
-        schemaVersion: 4,
+        schemaVersion: 5,
         migrationBlock: { migration, oldSchemaVersion in
             if oldSchemaVersion < 2 {
                 // do nothing for now; Realm will handle new properties with default values

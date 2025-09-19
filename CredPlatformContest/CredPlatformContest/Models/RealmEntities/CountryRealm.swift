@@ -15,14 +15,16 @@ class CountryRealm : Object {
     @Persisted var name : String
     @Persisted var currency : String?
     @Persisted var capital : String?
+    @Persisted var emoji : String?
     @Persisted var isFavorited : Bool?
+    @Persisted var continent : ContinentRealm?
     
 }
 
 extension CountryRealm {
     
     func toEntity() -> Country {
-        return Country(name: name, code: code, currency: currency, capital: capital, languages: [], isFavorited: isFavorited ?? false)
+        return Country(name: name, code: code, currency: currency, capital: capital, emoji: emoji, languages: [], continent: self.continent?.toEntity(), isFavorited: isFavorited ?? false)
     }
     
 }

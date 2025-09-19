@@ -18,7 +18,15 @@ fragment FGCountry on Country {
     awsRegion
     capital
     code
+    emoji
     currency
+    languages {
+        code
+        name
+    }
+    continent {
+        ...FGContinent
+    }
     languages {
         ...FGLanguage
     }
@@ -33,8 +41,5 @@ fragment FGLanguage on Language {
 
 fragment FGContinent on Continent {
     code
-    countries {
-        ...FGCountry
-    }
     name
 }

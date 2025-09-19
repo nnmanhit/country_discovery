@@ -9,43 +9,41 @@ import Combine
 import Foundation
 import SwiftUI
 
-struct Shimmer: ViewModifier {
-    @State private var phase: CGFloat = -0.5
+import SwiftUI
+
+struct ShimmerModifier: ViewModifier {
+    @State private var phase: CGFloat = 0
+
+    var gradient: LinearGradient {
+        LinearGradient(
+            gradient: Gradient(stops: [
+                .init(color: Color.gray.opacity(0.3), location: phase),
+                .init(color: Color.gray.opacity(0.1), location: phase + 0.1),
+                .init(color: Color.gray.opacity(0.3), location: phase + 0.2)
+            ]),
+            startPoint: .leading,
+            endPoint: .trailing
+        )
+    }
 
     func body(content: Content) -> some View {
         content
-            .overlay(
-                GeometryReader { geo in
-                    Rectangle()
-                        .fill(
-                            LinearGradient(
-                                gradient: Gradient(colors: [
-                                    Color.white.opacity(0),
-                                    Color.white.opacity(0.6),
-                                    Color.white.opacity(0)
-                                ]),
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .rotationEffect(.degrees(30))
-                        .offset(x: geo.size.width * phase)
-                }
-                .clipped()
+            .mask(
+                gradient
             )
             .onAppear {
                 withAnimation(
                     .linear(duration: 1.5)
                     .repeatForever(autoreverses: false)
                 ) {
-                    phase = 1.5
+                    phase = 1.0
                 }
             }
     }
 }
 
 extension View {
-    func shimmering() -> some View {
-        self.modifier(Shimmer())
+    func shimmer() -> some View {
+        self.modifier(ShimmerModifier())
     }
 }
