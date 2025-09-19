@@ -11,6 +11,11 @@ class MockLLMService : BaseLLMService {
     var shouldFailedQuestion : Bool = false
     
     override func generateCountryFunFact(country: Country, question: String?) async throws -> CountryFunFact? {
+        
+        if self.apiKey == "123" {
+            throw Error.ErrorInvalidKey
+        }
+        
         if shouldFailed {
             throw Error.ErrorNotFound
         }

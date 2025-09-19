@@ -71,6 +71,21 @@ final class CredPlatformContestTests: XCTestCase {
         
     }
     
+    func testLLMInvalidKey() async throws {
+        
+        self.mockApiService = MockAPIService()
+        self.mockLlmService = MockLLMService(apiKey: "123", model: "gpt-3.5-turbo")
+        
+        self.mockStorageService = MockStorageService()
+        
+        self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
+        
+        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", emoji: "usa", languages: [], continent: Continent(code: "AM", name: "America")), question: nil)
+        
+        XCTAssertTrue(self.countryViewModel?.errorMessage != nil)
+        
+    }
+    
     func testLoadCountryFuncFactSuccessfully() async throws {
         
         self.mockApiService = MockAPIService()
