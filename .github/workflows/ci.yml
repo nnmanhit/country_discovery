@@ -28,14 +28,8 @@ jobs:
         uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '16.2'
-
-      - name: Get latest iOS Simulator version
-        id: sim
-        run: |
-          LATEST=$(xcodebuild -showsdks | grep "Simulator - iOS" | awk '{print $4}' | sort -V | tail -n 1)
-          echo "LATEST_IOS=$LATEST" >> $GITHUB_ENV
       
       - name: Build app
         run: |
           cd CredPlatformContest
-          xcodebuild -scheme CredPlatformContest -destination "platform=iOS Simulator,name=iPhone 15,OS=${LATEST_IOS}" clean build
+          xcodebuild -scheme CredPlatformContest -destination "platform=iOS Simulator,name=iPhone 15,OS=18.5" clean build
