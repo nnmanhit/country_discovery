@@ -74,18 +74,6 @@
             ReferencedContainer = "container:CredPlatformContest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "OPENAI_API_KEY"
-            value = "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"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GEMINI_API_KEY"
-            value = "AIzaSyCz8ai7-z4Ca0qxqUVT9TjGGz17f-VfCr8"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
