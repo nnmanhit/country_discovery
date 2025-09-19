@@ -1,4 +1,4 @@
-name: iOS Build & Test
+name: CredPlatform iOS CI
 
 on:
   push:
@@ -9,27 +9,26 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-test:
     name: Build and Test
     runs-on: macos-latest
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Xcode
-        uses: maxim-lobanov/setup-xcode@v2
-        with:
-          xcode-version: "16.4"
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
-          # If you use CocoaPods
+          cd CredPlatformContest
           pod install
-          # If you use Swift Package Manager, no install needed
 
-      - name: Build app
-        run: xcodebuild -workspace CredPlatformContest.xcworkspace -scheme CredPlatformContest -sdk iphonesimulator -destination 'platform=iOS Simulator,name=16ProMax 18.2,OS=18.2' clean build
+      - name: Select Xcode version
+        run: sudo xcode-select -s /Applications/Xcode_16.2.app/Contents/Developer # Adjust to your Xcode version
 
-      - name: Run tests
-        run: xcodebuild test -workspace CredPlatformContest.xcworkspace -scheme CredPlatformContest -sdk iphonesimulator -destination 'platform=iOS Simulator,name=16ProMax 18.2,OS=18.2'
+      - name: Build and Test
+        run: |
+          cd CredPlatformContest
+          xcodebuild clean build test \
+            -workspace CredPlatformContest.xcworkspace \
+            -scheme CredPlatformContest \
+            -destination 'platform=iOS Simulator,name=iPhone 15' \
+            CODE_SIGNING_ALLOWED=NO
