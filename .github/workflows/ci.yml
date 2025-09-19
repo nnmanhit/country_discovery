@@ -35,5 +35,5 @@ jobs:
           xcodebuild clean build test \
             -workspace CredPlatformContest.xcworkspace \
             -scheme CredPlatformContest \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.4' \
+            -destination 'platform=iOS Simulator,OS=18.5' \
             CODE_SIGNING_ALLOWED=NO
