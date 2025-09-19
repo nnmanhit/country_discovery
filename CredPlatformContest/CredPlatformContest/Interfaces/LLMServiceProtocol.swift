@@ -7,4 +7,6 @@
 
 protocol LLMServiceProtocol {
     
+    func generateCountryFunFact(country: Country, question: String?) async throws -> CountryFunFact?
+    
 }

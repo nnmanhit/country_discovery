@@ -16,21 +16,45 @@ struct CountryListView : View {
         NavigationStack {
             VStack {
                 
-                ScrollView {
-                    VStack(spacing: 15) {
-                        ForEach(self.countryViewModel.countries) { country in
-                            Button(action: {
+                List {
+                    
+                    if countryViewModel.isLoading {
+                        
+                        ForEach(0..<50, id: \.self) { _ in
+                            SkeletonRow()
+                        }
+                        
+                    } else {
+                        ForEach(countryViewModel.countries, id: \.self) { country in
+                            HStack {
+                                NavigationLink(destination: CountrySummaryView(country: country, countryViewModel: countryViewModel)) {
+                                    CountryRow(country: country)
+                                }
+
+                                Button(action: {
+                                    Task {
+                                        await countryViewModel.toggleFavorite(country)
+                                    }
+                                }) {
+                                    Image(systemName: country.isFavorited == true ? "star.fill" : "star")
+                                        .resizable()
+                                        .frame(width: 32, height: 32)
+                                        .aspectRatio(contentMode: .fit)
+                                        .foregroundStyle(country.isFavorited == true ? Color.yellow : Color.blue)
+                                }
+                                .buttonStyle(.plain)
                                 
-                            }) {
-                                CountryRow(country: country)
                             }
                         }
+                        
                     }
+                    
                 }
+                .navigationTitle("Countries")
                 
             }
-            .onAppear {
-                Task {
+            .task {
+                Task.detached {
                     await self.countryViewModel.loadCountries()
                 }
             }
@@ -49,16 +73,13 @@ struct CountryRow: View {
                 Text(country.name)
                     .font(.title)
                     .fontWeight(.semibold)
+                    .foregroundStyle(.primary)
                 
                 Text(country.capital ?? "")
                     .font(.headline)
                     .foregroundColor(.secondary)
             }
         }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(15)
-        .shadow(color: Color.gray.opacity(0.1), radius: 8, x: 0, y: 4)
     }
 }
 

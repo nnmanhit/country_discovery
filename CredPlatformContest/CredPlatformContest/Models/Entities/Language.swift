@@ -5,7 +5,7 @@
 //  Created by Manh Nguyen on 9/18/25.
 //
 
-struct Language : Entity {
+struct Language : Entity, Hashable {
     
     var code : String
     let name : String

@@ -11,8 +11,8 @@ import XCTest
 final class CredPlatformContestTests: XCTestCase {
 
     var mockApiService : MockAPIService?
-    var mockLlmService : OpenAIService?
-    var mockStorageService : RealmService?
+    var mockLlmService : MockLLMService?
+    var mockStorageService : MockStorageService?
     var countryViewModel : CountryViewModel?
     
     override func setUpWithError() throws {
@@ -28,8 +28,8 @@ final class CredPlatformContestTests: XCTestCase {
         
         self.mockApiService = MockAPIService()
         
-        self.mockLlmService = OpenAIService()
-        self.mockStorageService = RealmService()
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockStorageService = MockStorageService()
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
         
@@ -44,14 +44,106 @@ final class CredPlatformContestTests: XCTestCase {
         self.mockApiService = MockAPIService()
         self.mockApiService?.shouldThrowError = true
         
-        self.mockLlmService = OpenAIService()
-        self.mockStorageService = RealmService()
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockStorageService = MockStorageService()
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
         
         await self.countryViewModel?.loadCountries()
         
         XCTAssertTrue(self.countryViewModel?.errorMessage != nil)
+        
+    }
+    
+    func testLoadCountryFuncFactFailed() async throws {
+        
+        self.mockApiService = MockAPIService()
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockLlmService?.shouldFailed = true
+        
+        self.mockStorageService = MockStorageService()
+        
+        self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
+        
+        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: []), question: nil)
+        
+        XCTAssertTrue(self.countryViewModel?.errorMessage != nil)
+        
+    }
+    
+    func testLoadCountryFuncFactSuccessfully() async throws {
+        
+        self.mockApiService = MockAPIService()
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockStorageService = MockStorageService()
+        
+        self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
+        
+        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: []), question: nil)
+        
+        XCTAssertTrue(self.countryViewModel?.countryFunFact != nil)
+        
+    }
+    
+    func testLoadCountryFuncFactWithQuestionSuccessfully() async throws {
+        
+        self.mockApiService = MockAPIService()
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockStorageService = MockStorageService()
+        
+        self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
+        
+        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: []), question: "I want to know more")
+        
+        XCTAssertTrue(self.countryViewModel?.countryFunFact?.funFact.contains("I want to know more") == true)
+        
+    }
+    
+    func testLoadCountryFuncFactWithQuestionFailed() async throws {
+        
+        self.mockApiService = MockAPIService()
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockLlmService?.shouldFailedQuestion = true
+        
+        self.mockStorageService = MockStorageService()
+        
+        self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
+        
+        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: []), question: "I want to know more")
+        
+        XCTAssertTrue(self.countryViewModel?.countryFunFact?.funFact.contains("I want to know more") == false)
+        
+    }
+    
+    func testToggleFavoriteCountryOn() async throws {
+        
+        self.mockApiService = MockAPIService()
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockStorageService = MockStorageService()
+        
+        self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
+        await self.countryViewModel?.loadCountries()
+        
+        let country = Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: [])
+        await self.countryViewModel?.toggleFavorite(country)
+        
+        XCTAssertTrue(self.countryViewModel?.toggledCountry?.isFavorited == true)
+        
+    }
+    
+    func testToggleFavoriteCountryOff() async throws {
+        
+        self.mockApiService = MockAPIService()
+        self.mockLlmService = MockLLMService(apiKey: Config.OPENAI_API_KEY, model: "gpt-3.5-turbo")
+        self.mockStorageService = MockStorageService()
+        
+        self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
+        await self.countryViewModel?.loadCountries()
+        
+        let country = Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: [], isFavorited: true)
+        await self.countryViewModel?.toggleFavorite(country)
+        
+        XCTAssertTrue(self.countryViewModel?.toggledCountry?.isFavorited == false)
         
     }
 

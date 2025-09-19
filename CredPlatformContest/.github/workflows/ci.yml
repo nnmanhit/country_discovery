@@ -1,0 +1,35 @@
+name: iOS Build & Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v2
+        with:
+          xcode-version: "16.4"
+
+      - name: Install dependencies
+        run: |
+          # If you use CocoaPods
+          pod install
+          # If you use Swift Package Manager, no install needed
+
+      - name: Build app
+        run: xcodebuild -workspace CredPlatformContest.xcworkspace -scheme CredPlatformContest -sdk iphonesimulator -destination 'platform=iOS Simulator,name=16ProMax 18.2,OS=18.2' clean build
+
+      - name: Run tests
+        run: xcodebuild test -workspace CredPlatformContest.xcworkspace -scheme CredPlatformContest -sdk iphonesimulator -destination 'platform=iOS Simulator,name=16ProMax 18.2,OS=18.2'

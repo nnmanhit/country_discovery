@@ -7,4 +7,9 @@
 
 protocol StorageServiceProtocol {
     
+    func insertCountries(countries: [Country]) async throws
+    func loadCountries() async throws -> [Country]
+    func toggleFavorite(country: Country) async throws -> Country
+    func getFavoritedCountries() async throws -> [Country]
+    
 }
