@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7ABDACB087B8A07AA5FF10C3 /* Pods_CredPlatformContestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604F0DAF9C47EC4389FC82A7 /* Pods_CredPlatformContestTests.framework */; };
+		9DF6C0F2B46204CF19264519 /* Pods_CredPlatformContest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7841C9D9EDC697529C8F429D /* Pods_CredPlatformContest.framework */; };
+		FCF1D654747E3FA8D0948251 /* Pods_CredPlatformContest_CredPlatformContestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406E9F77114F956577265319 /* Pods_CredPlatformContest_CredPlatformContestUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07E9B96A2E7CC02000B1CAE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07E9B9512E7CC01D00B1CAE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07E9B9582E7CC01D00B1CAE5;
+			remoteInfo = CredPlatformContest;
+		};
+		07E9B9742E7CC02000B1CAE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07E9B9512E7CC01D00B1CAE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07E9B9582E7CC01D00B1CAE5;
+			remoteInfo = CredPlatformContest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07E9B9592E7CC01D00B1CAE5 /* CredPlatformContest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CredPlatformContest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E9B9692E7CC02000B1CAE5 /* CredPlatformContestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CredPlatformContestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E9B9732E7CC02000B1CAE5 /* CredPlatformContestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CredPlatformContestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E20527C7EFA4C0F0161AF0C /* Pods-CredPlatformContest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CredPlatformContest.release.xcconfig"; path = "Target Support Files/Pods-CredPlatformContest/Pods-CredPlatformContest.release.xcconfig"; sourceTree = "<group>"; };
+		26BCCB00E4799EFD1965A5A5 /* Pods-CredPlatformContest-CredPlatformContestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CredPlatformContest-CredPlatformContestUITests.debug.xcconfig"; path = "Target Support Files/Pods-CredPlatformContest-CredPlatformContestUITests/Pods-CredPlatformContest-CredPlatformContestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B1D5321D54E21F4E5A9566B /* Pods-CredPlatformContestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CredPlatformContestTests.debug.xcconfig"; path = "Target Support Files/Pods-CredPlatformContestTests/Pods-CredPlatformContestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		348692601869F791B27EBB14 /* Pods-CredPlatformContest-CredPlatformContestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CredPlatformContest-CredPlatformContestUITests.release.xcconfig"; path = "Target Support Files/Pods-CredPlatformContest-CredPlatformContestUITests/Pods-CredPlatformContest-CredPlatformContestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		406E9F77114F956577265319 /* Pods_CredPlatformContest_CredPlatformContestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CredPlatformContest_CredPlatformContestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		604F0DAF9C47EC4389FC82A7 /* Pods_CredPlatformContestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CredPlatformContestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7841C9D9EDC697529C8F429D /* Pods_CredPlatformContest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CredPlatformContest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		888D36EA34D4A8A63B733000 /* Pods-CredPlatformContest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CredPlatformContest.debug.xcconfig"; path = "Target Support Files/Pods-CredPlatformContest/Pods-CredPlatformContest.debug.xcconfig"; sourceTree = "<group>"; };
+		F680EC42AC80F11E7D832A15 /* Pods-CredPlatformContestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CredPlatformContestTests.release.xcconfig"; path = "Target Support Files/Pods-CredPlatformContestTests/Pods-CredPlatformContestTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		07E9B95B2E7CC01D00B1CAE5 /* CredPlatformContest */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CredPlatformContest;
+			sourceTree = "<group>";
+		};
+		07E9B96C2E7CC02000B1CAE5 /* CredPlatformContestTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CredPlatformContestTests;
+			sourceTree = "<group>";
+		};
+		07E9B9762E7CC02000B1CAE5 /* CredPlatformContestUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CredPlatformContestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07E9B9562E7CC01D00B1CAE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF6C0F2B46204CF19264519 /* Pods_CredPlatformContest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9B9662E7CC02000B1CAE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ABDACB087B8A07AA5FF10C3 /* Pods_CredPlatformContestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9B9702E7CC02000B1CAE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCF1D654747E3FA8D0948251 /* Pods_CredPlatformContest_CredPlatformContestUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07E9B9502E7CC01D00B1CAE5 = {
+			isa = PBXGroup;
+			children = (
+				07E9B95B2E7CC01D00B1CAE5 /* CredPlatformContest */,
+				07E9B96C2E7CC02000B1CAE5 /* CredPlatformContestTests */,
+				07E9B9762E7CC02000B1CAE5 /* CredPlatformContestUITests */,
+				07E9B95A2E7CC01D00B1CAE5 /* Products */,
+				28980C72999C5971A0503A18 /* Pods */,
+				C77F53E56A84C589DC0F39B7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		07E9B95A2E7CC01D00B1CAE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07E9B9592E7CC01D00B1CAE5 /* CredPlatformContest.app */,
+				07E9B9692E7CC02000B1CAE5 /* CredPlatformContestTests.xctest */,
+				07E9B9732E7CC02000B1CAE5 /* CredPlatformContestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28980C72999C5971A0503A18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				888D36EA34D4A8A63B733000 /* Pods-CredPlatformContest.debug.xcconfig */,
+				1E20527C7EFA4C0F0161AF0C /* Pods-CredPlatformContest.release.xcconfig */,
+				26BCCB00E4799EFD1965A5A5 /* Pods-CredPlatformContest-CredPlatformContestUITests.debug.xcconfig */,
+				348692601869F791B27EBB14 /* Pods-CredPlatformContest-CredPlatformContestUITests.release.xcconfig */,
+				2B1D5321D54E21F4E5A9566B /* Pods-CredPlatformContestTests.debug.xcconfig */,
+				F680EC42AC80F11E7D832A15 /* Pods-CredPlatformContestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C77F53E56A84C589DC0F39B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7841C9D9EDC697529C8F429D /* Pods_CredPlatformContest.framework */,
+				406E9F77114F956577265319 /* Pods_CredPlatformContest_CredPlatformContestUITests.framework */,
+				604F0DAF9C47EC4389FC82A7 /* Pods_CredPlatformContestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07E9B9582E7CC01D00B1CAE5 /* CredPlatformContest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E9B97D2E7CC02000B1CAE5 /* Build configuration list for PBXNativeTarget "CredPlatformContest" */;
+			buildPhases = (
+				1A625975BC2653B7B3E7795A /* [CP] Check Pods Manifest.lock */,
+				07E9B9552E7CC01D00B1CAE5 /* Sources */,
+				07E9B9562E7CC01D00B1CAE5 /* Frameworks */,
+				07E9B9572E7CC01D00B1CAE5 /* Resources */,
+				72D83854383206B97090C17D /* [CP] Embed Pods Frameworks */,
+				07E9B9B32E7CC0F800B1CAE5 /* GraphQL Apollo */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				07E9B95B2E7CC01D00B1CAE5 /* CredPlatformContest */,
+			);
+			name = CredPlatformContest;
+			productName = CredPlatformContest;
+			productReference = 07E9B9592E7CC01D00B1CAE5 /* CredPlatformContest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07E9B9682E7CC02000B1CAE5 /* CredPlatformContestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E9B9802E7CC02000B1CAE5 /* Build configuration list for PBXNativeTarget "CredPlatformContestTests" */;
+			buildPhases = (
+				52B02C67A2BC590F4C09EC75 /* [CP] Check Pods Manifest.lock */,
+				07E9B9652E7CC02000B1CAE5 /* Sources */,
+				07E9B9662E7CC02000B1CAE5 /* Frameworks */,
+				07E9B9672E7CC02000B1CAE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07E9B96B2E7CC02000B1CAE5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				07E9B96C2E7CC02000B1CAE5 /* CredPlatformContestTests */,
+			);
+			name = CredPlatformContestTests;
+			productName = CredPlatformContestTests;
+			productReference = 07E9B9692E7CC02000B1CAE5 /* CredPlatformContestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07E9B9722E7CC02000B1CAE5 /* CredPlatformContestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E9B9832E7CC02000B1CAE5 /* Build configuration list for PBXNativeTarget "CredPlatformContestUITests" */;
+			buildPhases = (
+				C2B1B36F10CF4B84EA10531E /* [CP] Check Pods Manifest.lock */,
+				07E9B96F2E7CC02000B1CAE5 /* Sources */,
+				07E9B9702E7CC02000B1CAE5 /* Frameworks */,
+				07E9B9712E7CC02000B1CAE5 /* Resources */,
+				49D299766E64DE411087168D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07E9B9752E7CC02000B1CAE5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				07E9B9762E7CC02000B1CAE5 /* CredPlatformContestUITests */,
+			);
+			name = CredPlatformContestUITests;
+			productName = CredPlatformContestUITests;
+			productReference = 07E9B9732E7CC02000B1CAE5 /* CredPlatformContestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07E9B9512E7CC01D00B1CAE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					07E9B9582E7CC01D00B1CAE5 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					07E9B9682E7CC02000B1CAE5 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 07E9B9582E7CC01D00B1CAE5;
+					};
+					07E9B9722E7CC02000B1CAE5 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 07E9B9582E7CC01D00B1CAE5;
+					};
+				};
+			};
+			buildConfigurationList = 07E9B9542E7CC01D00B1CAE5 /* Build configuration list for PBXProject "CredPlatformContest" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07E9B9502E7CC01D00B1CAE5;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				07E9B9E12E7CCA6B00B1CAE5 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 07E9B95A2E7CC01D00B1CAE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07E9B9582E7CC01D00B1CAE5 /* CredPlatformContest */,
+				07E9B9682E7CC02000B1CAE5 /* CredPlatformContestTests */,
+				07E9B9722E7CC02000B1CAE5 /* CredPlatformContestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07E9B9572E7CC01D00B1CAE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9B9672E7CC02000B1CAE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9B9712E7CC02000B1CAE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07E9B9B32E7CC0F800B1CAE5 /* GraphQL Apollo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "GraphQL Apollo";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=Resources/GraphQL/GQLApi.graphql --localSchemaFile=Resources/GraphQL/schema.json Resources/GraphQL/GQLApi.swift --passthroughCustomScalars\n";
+		};
+		1A625975BC2653B7B3E7795A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CredPlatformContest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49D299766E64DE411087168D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CredPlatformContest-CredPlatformContestUITests/Pods-CredPlatformContest-CredPlatformContestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CredPlatformContest-CredPlatformContestUITests/Pods-CredPlatformContest-CredPlatformContestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CredPlatformContest-CredPlatformContestUITests/Pods-CredPlatformContest-CredPlatformContestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52B02C67A2BC590F4C09EC75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CredPlatformContestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72D83854383206B97090C17D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CredPlatformContest/Pods-CredPlatformContest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CredPlatformContest/Pods-CredPlatformContest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CredPlatformContest/Pods-CredPlatformContest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2B1B36F10CF4B84EA10531E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CredPlatformContest-CredPlatformContestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07E9B9552E7CC01D00B1CAE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9B9652E7CC02000B1CAE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9B96F2E7CC02000B1CAE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07E9B96B2E7CC02000B1CAE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07E9B9582E7CC01D00B1CAE5 /* CredPlatformContest */;
+			targetProxy = 07E9B96A2E7CC02000B1CAE5 /* PBXContainerItemProxy */;
+		};
+		07E9B9752E7CC02000B1CAE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07E9B9582E7CC01D00B1CAE5 /* CredPlatformContest */;
+			targetProxy = 07E9B9742E7CC02000B1CAE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07E9B97B2E7CC02000B1CAE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07E9B97C2E7CC02000B1CAE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07E9B97E2E7CC02000B1CAE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 888D36EA34D4A8A63B733000 /* Pods-CredPlatformContest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CredPlatformContest/Preview Content\"";
+				DEVELOPMENT_TEAM = C4NAQVPT93;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.contest.countrydiscovery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07E9B97F2E7CC02000B1CAE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E20527C7EFA4C0F0161AF0C /* Pods-CredPlatformContest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CredPlatformContest/Preview Content\"";
+				DEVELOPMENT_TEAM = C4NAQVPT93;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.contest.countrydiscovery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		07E9B9812E7CC02000B1CAE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B1D5321D54E21F4E5A9566B /* Pods-CredPlatformContestTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4NAQVPT93;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.contest.countrydiscovery.CredPlatformContestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CredPlatformContest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CredPlatformContest";
+			};
+			name = Debug;
+		};
+		07E9B9822E7CC02000B1CAE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F680EC42AC80F11E7D832A15 /* Pods-CredPlatformContestTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4NAQVPT93;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.contest.countrydiscovery.CredPlatformContestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CredPlatformContest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CredPlatformContest";
+			};
+			name = Release;
+		};
+		07E9B9842E7CC02000B1CAE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26BCCB00E4799EFD1965A5A5 /* Pods-CredPlatformContest-CredPlatformContestUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4NAQVPT93;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.contest.countrydiscovery.CredPlatformContestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CredPlatformContest;
+			};
+			name = Debug;
+		};
+		07E9B9852E7CC02000B1CAE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 348692601869F791B27EBB14 /* Pods-CredPlatformContest-CredPlatformContestUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4NAQVPT93;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.contest.countrydiscovery.CredPlatformContestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CredPlatformContest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07E9B9542E7CC01D00B1CAE5 /* Build configuration list for PBXProject "CredPlatformContest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E9B97B2E7CC02000B1CAE5 /* Debug */,
+				07E9B97C2E7CC02000B1CAE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07E9B97D2E7CC02000B1CAE5 /* Build configuration list for PBXNativeTarget "CredPlatformContest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E9B97E2E7CC02000B1CAE5 /* Debug */,
+				07E9B97F2E7CC02000B1CAE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07E9B9802E7CC02000B1CAE5 /* Build configuration list for PBXNativeTarget "CredPlatformContestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E9B9812E7CC02000B1CAE5 /* Debug */,
+				07E9B9822E7CC02000B1CAE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07E9B9832E7CC02000B1CAE5 /* Build configuration list for PBXNativeTarget "CredPlatformContestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E9B9842E7CC02000B1CAE5 /* Debug */,
+				07E9B9852E7CC02000B1CAE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07E9B9E12E7CCA6B00B1CAE5 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+	};
+	rootObject = 07E9B9512E7CC01D00B1CAE5 /* Project object */;
+}

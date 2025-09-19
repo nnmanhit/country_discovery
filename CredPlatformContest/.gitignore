@@ -1,0 +1,19 @@
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# Swift Package Manager
+.build/
+
+# Xcode
+DerivedData/
+*.xcworkspace
+xcuserdata/
+
+# Misc
+*.swp
+*.lock
+*.DS_Store
+

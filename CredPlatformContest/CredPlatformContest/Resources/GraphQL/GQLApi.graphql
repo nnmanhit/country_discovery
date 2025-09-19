@@ -1,0 +1,40 @@
+query continent($code: ID!) {
+    continent(code: $code) {
+        code
+        countries {
+            ...FGCountry
+        }
+    }
+}
+
+query countries($lang: String) {
+    countries {
+        name(lang: $lang)
+        ...FGCountry
+    }
+}
+
+fragment FGCountry on Country {
+    awsRegion
+    capital
+    code
+    currency
+    languages {
+        ...FGLanguage
+    }
+}
+
+fragment FGLanguage on Language {
+    code
+    name
+    native
+    rtl
+}
+
+fragment FGContinent on Continent {
+    code
+    countries {
+        ...FGCountry
+    }
+    name
+}
