@@ -77,7 +77,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "OPENAI_API_KEY"
-            value = "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"
+            value = "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"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
