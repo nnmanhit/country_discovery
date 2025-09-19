@@ -65,7 +65,7 @@ final class CredPlatformContestTests: XCTestCase {
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
         
-        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: []), question: nil)
+        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", emoji: "usa", languages: [], continent: Continent(code: "AM", name: "America")), question: nil)
         
         XCTAssertTrue(self.countryViewModel?.errorMessage != nil)
         
@@ -79,7 +79,7 @@ final class CredPlatformContestTests: XCTestCase {
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
         
-        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: []), question: nil)
+        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", emoji: "usa", languages: [], continent: Continent(code: "AM", name: "America")), question: nil)
         
         XCTAssertTrue(self.countryViewModel?.countryFunFact != nil)
         
@@ -93,7 +93,7 @@ final class CredPlatformContestTests: XCTestCase {
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
         
-        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: []), question: "I want to know more")
+        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", emoji: "usa", languages: [], continent: Continent(code: "AM", name: "America")), question: "I want to know more")
         
         XCTAssertTrue(self.countryViewModel?.countryFunFact?.funFact.contains("I want to know more") == true)
         
@@ -109,7 +109,7 @@ final class CredPlatformContestTests: XCTestCase {
         
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
         
-        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: []), question: "I want to know more")
+        await self.countryViewModel?.generateCountryFunFact(country: Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", emoji: "usa", languages: [], continent: Continent(code: "AM", name: "America")), question: "I want to know more")
         
         XCTAssertTrue(self.countryViewModel?.countryFunFact?.funFact.contains("I want to know more") == false)
         
@@ -124,7 +124,7 @@ final class CredPlatformContestTests: XCTestCase {
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
         await self.countryViewModel?.loadCountries()
         
-        let country = Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: [])
+        let country = Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", emoji: "usa", languages: [], continent: Continent(code: "AM", name: "America"))
         await self.countryViewModel?.toggleFavorite(country)
         
         XCTAssertTrue(self.countryViewModel?.toggledCountry?.isFavorited == true)
@@ -140,7 +140,7 @@ final class CredPlatformContestTests: XCTestCase {
         self.countryViewModel = CountryViewModel(apiService: mockApiService!, llmService: mockLlmService!, storageService: mockStorageService!)
         await self.countryViewModel?.loadCountries()
         
-        let country = Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", languages: [], isFavorited: true)
+        let country = Country(name: "USA", code: "US", currency: "USD", capital: "Washington DC", emoji: "usa", languages: [], continent: Continent(code: "AM", name: "America"), isFavorited: true)
         await self.countryViewModel?.toggleFavorite(country)
         
         XCTAssertTrue(self.countryViewModel?.toggledCountry?.isFavorited == false)
