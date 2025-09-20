@@ -87,7 +87,7 @@
 <h1>Why questions and trade-off points</h1>
 <ul>
   <li>Why do we choose to use UserDefaultService as the default storage first? Yes, for this application, the data is not complex. We choose UserDefaults to store the countries, favorites for fast, light and save the development time. However, we always be easily change to RealmService, CoreDataService or SQLite service easily without need to change the business code. This is a trade-off</li>
-  <li>Why do we do OpenAI APIs as the default? Yes, when I tested the OpenAI APIs, monitor the performance, I see the model 3.5 turbo responded much faster than Gemini. Same to the above, we can flexibily change the model without need to change the business code.</li>
+  <li>Why do we do OpenAI APIs as the default? Yes, when I tested the OpenAI APIs, monitor the performance, I see the model 3.5 turbo responded much faster than Gemini. Same to the above, we can flexibility change the model without need to change the business code.</li>
   <li>Why do we choose this architecture? Yes, I can say MMVM is one of the architecture which is pretty scalabilale, testable, and maintain. Although it takes time to setup initially, generate more codes but the benenfit is worthy to use.</li>
 </ul>
 
