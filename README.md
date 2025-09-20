@@ -67,13 +67,13 @@
   </ul>
 </p>
 
-<img width="1151" height="864" alt="Screenshot 2025-09-19 at 6 27 55 PM" src="https://github.com/user-attachments/assets/fb01c345-e368-4432-9b3f-9c64d1e4f08c" />
+<img width="1193" height="772" alt="Screenshot 2025-09-20 at 10 50 48 AM" src="https://github.com/user-attachments/assets/d2c0c409-74cb-4a7a-95af-2a665365cc94" />
 <br/>
 <br/>
 
 <h1>Class Diagram</h1>
 <br>
-<img width="1014" height="705" alt="Screenshot 2025-09-19 at 6 50 31 PM" src="https://github.com/user-attachments/assets/6bdf5a9d-923b-4bdc-a33f-04838d429a42" />
+<img width="983" height="789" alt="Screenshot 2025-09-20 at 10 49 40 AM" src="https://github.com/user-attachments/assets/2b1d7e79-ce00-47ef-b3c7-0ca88730a513" />
 
 <h1>Key Benefits for the Architecture</h1>
 <ul>
