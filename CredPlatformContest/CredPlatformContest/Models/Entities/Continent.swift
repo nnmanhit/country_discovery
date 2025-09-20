@@ -11,14 +11,3 @@ struct Continent : Entity, Codable, Hashable {
     let name : String
     
 }
-
-extension Continent {
-    
-    func toRealm() -> ContinentRealm {
-        let realm = ContinentRealm()
-        realm.name = self.name
-        realm.code = self.code
-        return realm
-    }
-    
-}

@@ -20,7 +20,8 @@ struct CredPlatformContestApp: App {
             // Easy change AI Service by initialize GeminiAIService
 //            let llmService = GeminiAIService(apiKey: Config.GAK, model: "gemini-2.5-flash")
             
-            let storageService = RealmService()
+//            let storageService = RealmService()
+            let storageService = UserDefaultService()
             let countryViewModel = CountryViewModel(apiService: apiService, llmService: llmService, storageService: storageService)
             
             CountryListView(countryViewModel: countryViewModel)

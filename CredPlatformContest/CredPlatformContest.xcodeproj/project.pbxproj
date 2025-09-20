@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07E9BC282E7D33CD00B1CAE5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 07E9BC272E7D33CD00B1CAE5 /* RealmSwift */; };
-		07E9BC292E7D33CD00B1CAE5 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 07E9BC272E7D33CD00B1CAE5 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7ABDACB087B8A07AA5FF10C3 /* Pods_CredPlatformContestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604F0DAF9C47EC4389FC82A7 /* Pods_CredPlatformContestTests.framework */; };
 		9DF6C0F2B46204CF19264519 /* Pods_CredPlatformContest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7841C9D9EDC697529C8F429D /* Pods_CredPlatformContest.framework */; };
 		FCF1D654747E3FA8D0948251 /* Pods_CredPlatformContest_CredPlatformContestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406E9F77114F956577265319 /* Pods_CredPlatformContest_CredPlatformContestUITests.framework */; };
@@ -38,7 +36,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				07E9BC292E7D33CD00B1CAE5 /* RealmSwift in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E9BC282E7D33CD00B1CAE5 /* RealmSwift in Frameworks */,
 				9DF6C0F2B46204CF19264519 /* Pods_CredPlatformContest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +253,6 @@
 			mainGroup = 07E9B9502E7CC01D00B1CAE5;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				07E9B9E12E7CCA6B00B1CAE5 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				074C3E2E2E7E141C00E73903 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -772,23 +767,7 @@
 				minimumVersion = 1.9.0;
 			};
 		};
-		07E9B9E12E7CCA6B00B1CAE5 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		07E9BC272E7D33CD00B1CAE5 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 07E9B9E12E7CCA6B00B1CAE5 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07E9B9512E7CC01D00B1CAE5 /* Project object */;
 }

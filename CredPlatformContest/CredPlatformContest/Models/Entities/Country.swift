@@ -29,21 +29,3 @@ struct Country : Entity, Identifiable, Hashable {
     
     var id : String { code }
 }
-
-extension Country {
-    
-    func toRealm() -> CountryRealm {
-        
-        let realm = CountryRealm()
-        realm.name = self.name
-        realm.capital = self.capital
-        realm.emoji = self.emoji
-        realm.code = self.code
-        realm.currency = self.currency
-        realm.isFavorited = self.isFavorited
-        realm.continent = self.continent?.toRealm()
-        return realm
-        
-    }
-    
-}

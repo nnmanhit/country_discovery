@@ -6,7 +6,7 @@
 //
 
 class MockStorageService : StorageServiceProtocol {
-    func getFavoritedCountries() async throws -> [Country] {
+    func getFavoritedCountryCodes() async throws -> [String] {
         return []
     }
     

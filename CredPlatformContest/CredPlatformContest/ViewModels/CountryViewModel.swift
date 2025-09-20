@@ -34,22 +34,21 @@ class CountryViewModel : CountryViewModelProtocol {
                 self.isLoading = true
             }
             
-            let loadedCountries = try await apiService.loadCountries()
-            let favoriteCountries = try await storageService.getFavoritedCountries()
-            let favoriteCodes = Set(favoriteCountries.map { $0.code })
+            var loadedCountries = try await apiService.loadCountries()
+            let favoriteCountryCodes = try await storageService.getFavoritedCountryCodes()
 
-            let countriesToUse = loadedCountries.map { country in
-                var c = country
-                c.isFavorited = favoriteCodes.contains(c.code)
-                return c
+            for i in 0..<loadedCountries.count {
+                if favoriteCountryCodes.contains(loadedCountries[i].code) {
+                    loadedCountries[i].isFavorited = true
+                }
             }
 
-            if !countriesToUse.isEmpty {
-                try await storageService.insertCountries(countries: countriesToUse)
+            if !loadedCountries.isEmpty {
+                try await storageService.insertCountries(countries: loadedCountries)
             }
 
             await MainActor.run {
-                self.countries = countriesToUse
+                self.countries = loadedCountries
                 self.isLoading = false
             }
             

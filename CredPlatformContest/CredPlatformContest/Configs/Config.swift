@@ -5,7 +5,6 @@
 //  Created by Manh Nguyen on 9/18/25.
 //
 
-import RealmSwift
 import Foundation
 
 struct Config {
@@ -17,14 +16,5 @@ struct Config {
     static let OAK = openBagToFindEgg()
     
     static let GAK = openEggToFindBag()
-    
-    static let realmConfiguration = Realm.Configuration(
-        schemaVersion: 5,
-        migrationBlock: { migration, oldSchemaVersion in
-            if oldSchemaVersion < 2 {
-                // do nothing for now; Realm will handle new properties with default values
-            }
-        }
-    )
     
 }
