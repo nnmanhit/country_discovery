@@ -43,13 +43,13 @@ struct CountrySummaryView : View {
     @ObservedObject var countryViewModel: CountryViewModel
     
     @State private var userQuestion: String = ""
-    @State private var showingAnswer = false // Control when to show the answer
+    // Tracks if a user's question is being processed
+    @State private var isLoadingAnswer = false
     
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
                 
-                // Header with Flag and Titles
                 VStack(spacing: 8) {
                     Text(country.emoji ?? "")
                         .font(.system(size: 80))
@@ -67,7 +67,6 @@ struct CountrySummaryView : View {
                 }
                 .padding(.top)
                 
-                // General Information Card
                 CardView {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("General Information")
@@ -84,7 +83,6 @@ struct CountrySummaryView : View {
                     }
                 }
                 
-                // Fun Fact / AI Answer Card
                 CardView {
                     VStack(alignment: .leading, spacing: 15) {
                         HStack {
@@ -96,7 +94,7 @@ struct CountrySummaryView : View {
                             Spacer()
                             
                             if countryViewModel.isLoading {
-                                ProgressView() // Show progress while generating
+                                ProgressView()
                                     .controlSize(.small)
                             }
                         }
@@ -117,30 +115,46 @@ struct CountrySummaryView : View {
                         // User input field
                         TextField("Ask a question about \(country.name)", text: $userQuestion)
                             .textFieldStyle(.roundedBorder)
+                            .disabled(isLoadingAnswer)
                         
                         Button(action: {
-                            showingAnswer = true
+                            guard !userQuestion.isEmpty, !isLoadingAnswer else { return }
+                            
+                            isLoadingAnswer = true
+                            
                             Task {
                                 await self.countryViewModel.generateCountryFunFact(country: country, question: userQuestion)
+                                isLoadingAnswer = false
                             }
                         }) {
-                            Text("Get an answer")
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundStyle(.white)
-                                .font(.headline)
-                                .cornerRadius(12)
+                            HStack {
+                                Spacer()
+
+                                if isLoadingAnswer {
+                                    ProgressView()
+                                        .tint(.white)
+                                } else {
+                                    Text("Get an answer")
+                                }
+                                Spacer()
+                            }
+                            .padding()
+                            .background(isLoadingAnswer ? Color.blue.opacity(0.6) : Color.blue)
+                            .foregroundStyle(.white)
+                            .font(.headline)
+                            .cornerRadius(12)
                         }
                         .buttonStyle(.plain)
+                        .disabled(isLoadingAnswer)
                     }
                 }
-                
             }
             .navigationTitle(country.name)
             .navigationBarTitleDisplayMode(.inline)
             .task {
+                
                 self.countryViewModel.countryFunFact?.funFact = ""
+                
                 Task.detached {
                     await self.countryViewModel.generateCountryFunFact(country: country, question: nil)
                 }
