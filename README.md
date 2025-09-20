@@ -84,11 +84,11 @@
   <li><p>Reusability: The ViewModel and service layers can be reused in different parts of the application or even in a different application altogether.</p></li>
 </ul>
 
-<h1>Trade-Off</h1>
+<h1>Why questions and trade-off points</h1>
 <ul>
-  <li><p>That MVVM architecture, while powerful, comes with some key trade-offs. The main trade-off is the increased complexity and boilerplate code you need to write upfront. This can be overkill for small, simple applications but pays off in the long run for larger, more complex ones.</p></li>
-  <li><p>You'll write more code to set up the architecture. For every feature, you'll likely need a View, a ViewModel, and possibly a new Service or an extension to an existing one. This can feel tedious for simple tasks that could be done with a single class :D</p></li>
-  <li>The project is built in SwiftUI+Combine which is a new paradym programming like React. This would be a good for future, but for some developers who are not familiar with it, it would be taking time to read the code and debug</li>
+  <li>Why do we choose to use UserDefaultService as the default storage first? Yes, for this application, the data is not complex. We choose UserDefaults to store the countries, favorites for fast, light and save the development time. However, we always be easily change to RealmService, CoreDataService or SQLite service easily without need to change the business code. This is a trade-off</li>
+  <li>Why do we do OpenAI APIs as the default? Yes, when I tested the OpenAI APIs, monitor the performance, I see the model 3.5 turbo responded much faster than Gemini. Same to the above, we can flexibily change the model without need to change the business code.</li>
+  <li>Why do we choose this architecture? Yes, I can say MMVM is one of the architecture which is pretty scalabilale, testable, and maintain. Although it takes time to setup initially, generate more codes but the benenfit is worthy to use.</li>
 </ul>
 
 <h1>Limitations</h1>
