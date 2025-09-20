@@ -13,16 +13,16 @@ jobs:
     name: Build and Test
     runs-on: macos-latest
     steps:
-      - name: Check Xcode version
-        run: xcodebuild -showsdks
+      # - name: Check Xcode version
+      #   run: xcodebuild -showsdks
         
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # - name: Checkout repository
+      #   uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: |
-          cd CredPlatformContest
-          pod install
+      # - name: Install dependencies
+      #   run: |
+      #     cd CredPlatformContest
+      #     pod install
 
       - name: Force Xcode 16.4
         run: sudo xcode-select -switch /Applications/Xcode_16.4.app
