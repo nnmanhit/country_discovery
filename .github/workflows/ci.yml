@@ -29,7 +29,7 @@ jobs:
       - name: Run tests
         run: |
           cd CredPlatformContest
-          xcodebuild test -workspace "CredPlatformContest.xcworkspace" -scheme "CredPlatformContest" -destination "platform=iOS Simulator,name=iPhone 16 Pro Max,OS=latest"
+          xcodebuild clean test -workspace "CredPlatformContest.xcworkspace" -scheme "CredPlatformContest" -destination "platform=iOS Simulator,name=iPhone 16 Pro Max,OS=latest"
       - name: Build App
         run: |
           cd CredPlatformContest
