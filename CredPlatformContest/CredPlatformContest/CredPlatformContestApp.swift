@@ -15,16 +15,15 @@ struct CredPlatformContestApp: App {
             
             // Real
             let apiService = GQLAPIService()
-            let llmService = OpenAIService(apiKey: Config.OAK ?? "", model: "gpt-3.5-turbo")
             
             // Easy change AI Service by initialize GeminiAIService
 //            let llmService = GeminiAIService(apiKey: Config.GAK, model: "gemini-2.5-flash")
-            
 //            let storageService = RealmService()
-            let storageService = UserDefaultService()
-            let countryViewModel = CountryViewModel(apiService: apiService, llmService: llmService, storageService: storageService)
             
-            CountryListView(countryViewModel: countryViewModel)
+            let storageService = UserDefaultService()
+            let countryListViewModel = CountryListViewModel(apiService: apiService, storageService: storageService)
+            
+            CountryListView(countryListViewModel: countryListViewModel)
             
         }
     }

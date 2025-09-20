@@ -22,10 +22,10 @@ class MockLLMService : BaseLLMService {
         
         if let question = question, !question.isEmpty {
             if shouldFailedQuestion == false {
-                return CountryFunFact(country: country, funFact: "Country fun fact for your question (\(question))")
+                return CountryFunFact(country: country, funFact: "OK More")
             }
             
-            return CountryFunFact(country: country, funFact: "Country fun fact for your question")
+            throw Error.ErrorOnQuestion
         }
         
         return CountryFunFact(country: country, funFact: "Country fun fact")

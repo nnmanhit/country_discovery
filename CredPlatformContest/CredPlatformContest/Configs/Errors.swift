@@ -14,5 +14,6 @@ struct Error {
     
     static let ErrorNotFound = NSError(domain: "", code: Error.DATA_NOT_FOUND, userInfo: [NSLocalizedDescriptionKey: "Data not found"])
     static let ErrorInvalidKey = NSError(domain: "", code: Error.INVALID_KEY, userInfo: [NSLocalizedDescriptionKey: "Invalid Key"])
+    static let ErrorOnQuestion = NSError(domain: "", code: Error.INVALID_KEY, userInfo: [NSLocalizedDescriptionKey: "Question Error"])
     
 }

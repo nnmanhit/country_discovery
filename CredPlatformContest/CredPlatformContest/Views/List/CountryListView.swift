@@ -56,7 +56,7 @@ struct CountryRow: View {
 }
 
 struct CountryListView: View {
-    @StateObject var countryViewModel: CountryViewModel
+    @StateObject var countryListViewModel: CountryListViewModel
     
     var body: some View {
         NavigationStack {
@@ -64,7 +64,7 @@ struct CountryListView: View {
                 Color.gray.opacity(0.1)
                     .edgesIgnoringSafeArea(.all)
                 
-                if countryViewModel.isLoading {
+                if countryListViewModel.isLoading {
                     ScrollView {
                         LazyVStack(spacing: 0) {
                             ForEach(0..<30, id: \.self) { _ in
@@ -77,16 +77,16 @@ struct CountryListView: View {
                 } else {
                     ScrollView {
                         LazyVStack(spacing: 0) {
-                            ForEach(countryViewModel.countries, id: \.self) { country in
+                            ForEach(countryListViewModel.countries, id: \.self) { country in
                                 CardView {
                                     HStack {
-                                        NavigationLink(destination: CountrySummaryView(country: country, countryViewModel: countryViewModel)) {
+                                        NavigationLink(destination: CountrySummaryView(country: country, countrySummaryViewModel: CountrySummaryViewModel(country: country, llmService: OpenAIService(apiKey: Config.OAK ?? "", model: "gpt-3.5-turbo")))) {
                                             CountryRow(country: country)
                                         }
                                         
                                         Button(action: {
                                             Task {
-                                                await countryViewModel.toggleFavorite(country)
+                                                await countryListViewModel.toggleFavorite(country)
                                             }
                                         }) {
                                             Image(systemName: country.isFavorited == true ? "star.fill" : "star")
@@ -104,11 +104,6 @@ struct CountryListView: View {
                 }
             }
             .navigationTitle("Countries")
-            .task {
-                Task.detached {
-                    await self.countryViewModel.loadCountries()
-                }
-            }
         }
     }
 }

@@ -10,6 +10,5 @@ import Combine
 protocol CountryViewModelProtocol : ObservableObject {
     
     func loadCountries() async
-    func generateCountryFunFact(country: Country, question: String?) async
     
 }

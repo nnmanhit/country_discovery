@@ -40,11 +40,9 @@ struct DataRow: View {
 struct CountrySummaryView : View {
     
     let country: Country
-    @ObservedObject var countryViewModel: CountryViewModel
+    @StateObject var countrySummaryViewModel: CountrySummaryViewModel
     
     @State private var userQuestion: String = ""
-    // Tracks if a user's question is being processed
-    @State private var isLoadingAnswer = false
     
     var body: some View {
         ScrollView {
@@ -93,13 +91,13 @@ struct CountrySummaryView : View {
                             
                             Spacer()
                             
-                            if countryViewModel.isLoading {
+                            if countrySummaryViewModel.isLoading {
                                 ProgressView()
                                     .controlSize(.small)
                             }
                         }
                         
-                        if let fact = countryViewModel.countryFunFact?.funFact, !fact.isEmpty {
+                        if let fact = countrySummaryViewModel.countryFunFact?.funFact, !fact.isEmpty {
                             Text(fact)
                                 .font(.body)
                                 .lineSpacing(5)
@@ -115,22 +113,19 @@ struct CountrySummaryView : View {
                         // User input field
                         TextField("Ask a question about \(country.name)", text: $userQuestion)
                             .textFieldStyle(.roundedBorder)
-                            .disabled(isLoadingAnswer)
+                            .disabled(self.countrySummaryViewModel.isLoading)
                         
                         Button(action: {
-                            guard !userQuestion.isEmpty, !isLoadingAnswer else { return }
-                            
-                            isLoadingAnswer = true
+                            guard !userQuestion.isEmpty, !self.countrySummaryViewModel.isLoading else { return }
                             
                             Task {
-                                await self.countryViewModel.generateCountryFunFact(country: country, question: userQuestion)
-                                isLoadingAnswer = false
+                                await self.countrySummaryViewModel.generateCountryFunFact(question: userQuestion)
                             }
                         }) {
                             HStack {
                                 Spacer()
 
-                                if isLoadingAnswer {
+                                if self.countrySummaryViewModel.isLoading {
                                     ProgressView()
                                         .tint(.white)
                                 } else {
@@ -139,26 +134,18 @@ struct CountrySummaryView : View {
                                 Spacer()
                             }
                             .padding()
-                            .background(isLoadingAnswer ? Color.blue.opacity(0.6) : Color.blue)
+                            .background(self.countrySummaryViewModel.isLoading ? Color.blue.opacity(0.6) : Color.blue)
                             .foregroundStyle(.white)
                             .font(.headline)
                             .cornerRadius(12)
                         }
                         .buttonStyle(.plain)
-                        .disabled(isLoadingAnswer)
+                        .disabled(self.countrySummaryViewModel.isLoading)
                     }
                 }
             }
             .navigationTitle(country.name)
             .navigationBarTitleDisplayMode(.inline)
-            .task {
-                
-                self.countryViewModel.countryFunFact?.funFact = ""
-                
-                Task.detached {
-                    await self.countryViewModel.generateCountryFunFact(country: country, question: nil)
-                }
-            }
         }
     }
 }

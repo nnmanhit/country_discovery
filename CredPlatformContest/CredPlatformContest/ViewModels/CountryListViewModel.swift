@@ -8,22 +8,23 @@
 import Combine
 import Foundation
 
-class CountryViewModel : CountryViewModelProtocol {
+class CountryListViewModel : CountryViewModelProtocol {
     
     @Published var errorMessage : String? = nil
     @Published var countries : [Country] = []
-    @Published var countryFunFact : CountryFunFact? = nil
     @Published var toggledCountry : Country? = nil
     @Published var isLoading : Bool = false
     
     let apiService : APIServiceProtocol
-    let llmService : LLMServiceProtocol
     let storageService : StorageServiceProtocol
     
-    init(apiService: APIServiceProtocol, llmService: LLMServiceProtocol, storageService: StorageServiceProtocol) {
+    init(apiService: APIServiceProtocol, storageService: StorageServiceProtocol) {
         self.apiService = apiService
-        self.llmService = llmService
         self.storageService = storageService
+        
+        Task {
+            await loadCountries()
+        }
     }
     
     func loadCountries() async {
@@ -69,24 +70,6 @@ class CountryViewModel : CountryViewModelProtocol {
             await MainActor.run {
                 self.errorMessage = error.localizedDescription
                 self.isLoading = false
-            }
-        }
-        
-    }
-    
-    func generateCountryFunFact(country: Country, question: String?) async {
-        
-        do {
-            
-            let countryFunFact = try await llmService.generateCountryFunFact(country: country, question: question)
-            await MainActor.run {
-                self.countryFunFact = countryFunFact
-            }
-            
-        } catch {
-            print("error - \(error)")
-            await MainActor.run {
-                self.errorMessage = error.localizedDescription
             }
         }
         
