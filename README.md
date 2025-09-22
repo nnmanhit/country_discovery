@@ -22,6 +22,7 @@
   <li>Maintainability</li>
   <li>Tesable</li>
   <li>Modularity</li>
+  <li>Secured</li>
 </ul>
 
 <h1>Architecture</h1>
@@ -95,7 +96,7 @@
 <ul>
   <li><p>High Upfront Cost: The initial setup of the project takes longer. You have to create the View, ViewModel, and define the service layers and protocols before you can start implementing the core business logic</p></li>
   <li><p>If not well-managed, the ViewModel can become a dumping ground for all business logic</p></li>
-  <li><p>This application hasn't built with not all xctest cases yet. But we can denitely add more</p></li>
+  <li><p>This application hasn't built with all xctest cases yet. But we can denitely add more</p></li>
 </ul>
 
 <h1>Core Technologies</h1>
